@@ -8,6 +8,8 @@
       </div>
       <v-divider :style="{'margin-bottom': '50px'}"></v-divider>
       <TodoList/>
+      <v-divider :style="{'margin-bottom': '50px', 'margin-top': '50px'}"></v-divider>
+      <TicketShop/>
     </v-main>
   </v-app>
 </template>
@@ -15,12 +17,14 @@
 <script>
 import CardProfile from './components/CardProfile.vue'
 import TodoList from './components/TodoList.vue'
+import TicketShop from './components/TicketShop.vue'
 export default {
   name: 'App',
 
   components: {
     CardProfile,
-    TodoList
+    TodoList,
+    TicketShop
   },
 
   data: () => ({

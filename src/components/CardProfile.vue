@@ -18,10 +18,10 @@
             </div>
             <div
                 :style="{ 'display': 'flex', 'justify-content': 'center', 'flex-direction': 'column', 'align-items': 'center', 'gap': '1rem' }">
-                <p v-if="toggle === 'br'" :style="{ 'font-size': 'x-large' }"><strong>PROGRAMADOR FRONT-END</strong></p>
-                <p v-if="toggle === 'us'" :style="{ 'font-size': 'x-large' }"><strong>FRONT-END PROGRAMMER</strong></p>
-                <p v-if="toggle === 'br'">tecnologias | linguagens:</p>
-                <p v-if="toggle === 'us'">technologies | languages:</p>
+                <p class="text" v-if="toggle === 'br'" :style="{ 'font-size': 'x-large' }"><strong>PROGRAMADOR FRONT-END</strong></p>
+                <p class="text" v-if="toggle === 'us'" :style="{ 'font-size': 'x-large' }"><strong>FRONT-END PROGRAMMER</strong></p>
+                <p class="text" v-if="toggle === 'br'">tecnologias | linguagens:</p>
+                <p  class="text" v-if="toggle === 'us'">technologies | languages:</p>
                 <div :style="{ 'display': 'flex' }">
                     <v-tooltip text="JavaScript" location="top">
                         <template v-slot:activator="{ props }">
@@ -66,10 +66,10 @@
                         </template>
                     </v-tooltip>
                 </div>
-                <p v-if="toggle === 'br'">SOBRE MIM</p>
-                <p v-if="toggle === 'us'">ABOUT ME</p>
-                <p v-if="toggle === 'br'">Atualmente apenas vagando no ecosistema em busca de um emprego</p>
-                <p v-if="toggle === 'us'">Currently just wandering in the ecosystem in search of a job</p>
+                <p class="text" v-if="toggle === 'br'">SOBRE MIM</p>
+                <p class="text" v-if="toggle === 'us'">ABOUT ME</p>
+                <p class="text" v-if="toggle === 'br'">Atualmente apenas vagando no ecosistema em busca de um emprego</p>
+                <p class="text" v-if="toggle === 'us'">Currently just wandering in the ecosystem in search of a job</p>
             </div>
 
         </div>
@@ -94,6 +94,9 @@ export default {
 }
 </script>
 <style scoped>
+.text{
+    text-align: center;
+}
 .icon-mouse {
     margin-top: 2rem;
     display: flex;
