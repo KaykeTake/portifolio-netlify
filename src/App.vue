@@ -3,7 +3,7 @@
     <v-main>
       <CardProfile />
       <v-divider></v-divider>
-      <div :style="{'display': 'flex', 'justifyContent': 'center', 'font-size': 'xxx-large'}">
+      <div :style="{'display': 'flex', 'justifyContent': 'center', 'font-size': 'xxx-large', 'text-align':'center'}">
         PROJETOS PARA PORTIFÓLIO
       </div>
       <v-divider :style="{'margin-bottom': '50px'}"></v-divider>
