@@ -81,6 +81,9 @@
                     src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white"
                     alt="linkedin" /> </a>
         </div>
+        <div class="icon-mouse">
+            <v-icon>mdi-mouse</v-icon>
+        </div>
     </div>
 </template>
 <script>
@@ -91,4 +94,26 @@ export default {
 }
 </script>
 <style scoped>
+.icon-mouse {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-mouse .v-icon {
+    transition: transform 0.3s ease-in-out;
+    animation: bounceUpDown 2s infinite;
+}
+@keyframes bounceUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
 </style>
