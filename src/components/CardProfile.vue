@@ -18,10 +18,12 @@
             </div>
             <div
                 :style="{ 'display': 'flex', 'justify-content': 'center', 'flex-direction': 'column', 'align-items': 'center', 'gap': '1rem' }">
-                <p class="text" v-if="toggle === 'br'" :style="{ 'font-size': 'x-large' }"><strong>PROGRAMADOR FRONT-END</strong></p>
-                <p class="text" v-if="toggle === 'us'" :style="{ 'font-size': 'x-large' }"><strong>FRONT-END PROGRAMMER</strong></p>
+                <p class="text" v-if="toggle === 'br'" :style="{ 'font-size': 'x-large' }"><strong>PROGRAMADOR
+                        FRONT-END</strong></p>
+                <p class="text" v-if="toggle === 'us'" :style="{ 'font-size': 'x-large' }"><strong>FRONT-END
+                        PROGRAMMER</strong></p>
                 <p class="text" v-if="toggle === 'br'">tecnologias | linguagens:</p>
-                <p  class="text" v-if="toggle === 'us'">technologies | languages:</p>
+                <p class="text" v-if="toggle === 'us'">technologies | languages:</p>
                 <div :style="{ 'display': 'flex' }">
                     <v-tooltip text="JavaScript" location="top">
                         <template v-slot:activator="{ props }">
@@ -80,6 +82,10 @@
             <a href="https://www.linkedin.com/in/anderson-kayke/"> <img
                     src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white"
                     alt="linkedin" /> </a>
+            <a href="https://resume.io/r/Gz0lu1BbX"> <img
+                    src="https://camo.githubusercontent.com/e37091747d316cd7484f805586e492516080325e316c063eb194c8451681e035/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d726573756d652d696e666f726d6174696f6e616c3f7374796c653d666c61742d737175617265"
+                    alt="resume" /> </a>
+
         </div>
         <div class="icon-mouse">
             <v-icon>mdi-mouse</v-icon>
@@ -94,9 +100,10 @@ export default {
 }
 </script>
 <style scoped>
-.text{
+.text {
     text-align: center;
 }
+
 .icon-mouse {
     margin-top: 2rem;
     display: flex;
@@ -108,6 +115,7 @@ export default {
     transition: transform 0.3s ease-in-out;
     animation: bounceUpDown 2s infinite;
 }
+
 @keyframes bounceUpDown {
 
     0%,
