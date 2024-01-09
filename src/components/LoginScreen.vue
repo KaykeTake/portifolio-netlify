@@ -1,5 +1,5 @@
 <template>
-    <v-sheet width="90%" class="mx-auto" color="white" :style="{ 'padding': '40px' }">
+    <v-sheet class="mx-auto" color="white">
         <v-container fluid fill-height>
             <v-row align="center" justify="center">
                 <v-col cols="12" sm="8" md="6" lg="4">
@@ -18,8 +18,13 @@
                                     class="text-blue text-decoration-none" href="#" rel="noopener noreferrer"
                                     target="_blank"> Forgot Password? </a></div> <v-btn class="button" rounded="xl" block
                                 color="success">Login</v-btn>
-                        </form> <v-btn prepend-icon="mdi-google" class="button" rounded="xl" color="white" block>Login with
-                            google</v-btn>
+                        </form>
+                        <v-btn v-if="$vuetify.display.mdAndUp" prepend-icon="mdi-google" class="button" rounded="xl"
+                            color="white" block>Login with google</v-btn>
+                        <v-btn v-else class="button" rounded="xl" color="white" block>
+                            <v-icon>mdi-google</v-icon> </v-btn>
+
+
                         <div :style="{ 'display': 'flex', 'gap': '1rem', 'justify-content': 'center' }">
                             <p>don't have an account?</p> <a class="text-blue text-decoration-none" href="#"
                                 rel="noopener noreferrer" target="_blank"> Sign up </a>
