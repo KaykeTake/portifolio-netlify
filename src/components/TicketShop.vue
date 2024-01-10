@@ -26,6 +26,11 @@
                                 </template>
                             </v-list-item>
                         </v-list>
+
+                        <div class="pa-2">
+                            <v-btn block color="orange" >purchase</v-btn>
+                        </div>
+
                     </v-menu>
                 </template>
             </v-app-bar>
