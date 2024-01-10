@@ -1,5 +1,9 @@
 <template>
-  <v-navigation-drawer :width="300">
+  <v-app-bar v-if="isMobile">
+    <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar-title>My Projects in Vue</v-app-bar-title>
+  </v-app-bar>
+  <v-navigation-drawer v-model="drawer" :width="300">
     <v-list-item title="My Projects in Vue" subtitle="Are simplify projects"></v-list-item>
     <v-divider></v-divider>
     <v-list-item link title="TodoList" @click="changeProjects('todolist')"></v-list-item>
@@ -26,13 +30,39 @@ export default {
     LoginScreen
   },
   data: () => ({
-    show: 'todolist'
+    show: 'todolist',
+    drawer: false,
+    isMobile: null
   }),
   methods: {
     changeProjects(project) {
       this.show = project
-    }
-  }
+    },
+    checkMobile() {
+      this.isMobile = window.innerWidth <= 600 // ou outro valor de largura que você considere como "móvel"
+    },
+  },
+  mounted() {
+    this.checkMobile()
+    window.addEventListener('resize', this.checkMobile)
+  },
 }
 </script>
 <style scoped></style>
+
+<!-- <v-app-bar app v-if="isMobile">
+  <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+  <v-app-bar-title>My Projects in Vue</v-app-bar-title>
+  </v-app-bar>
+  toggleDrawer() {
+    this.drawer = !this.drawer
+  },
+  checkMobile() {
+    this.isMobile = window.innerWidth <= 600 // ou outro valor de largura que você considere como "móvel"
+  },
+},
+mounted() {
+  this.checkMobile()
+  window.addEventListener('resize', this.checkMobile)
+},
+} -->
