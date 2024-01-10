@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="mx-auto" width="90%" color="white" :style="{ 'padding': '40px' }">
+    <v-sheet class="mx-auto" height="100vh" color="white" :style="{ 'padding': '40px' }">
         <v-card class="mx-auto" max-width="90%">
             <v-container fluid>
                 <v-row dense>

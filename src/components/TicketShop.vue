@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="mx-auto" width="90%" color="white" :style="{ 'padding': '40px' }">
+    <v-sheet class="mx-auto" height="100vh" color="white" :style="{ 'padding': '40px' }">
         <v-layout>
             <v-app-bar color="primary" density="compact">
                 <template v-slot:prepend>

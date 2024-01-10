@@ -87,8 +87,8 @@
                     alt="resume" /> </a>
 
         </div>
-        <div class="icon-mouse">
-            <v-icon>mdi-mouse</v-icon>
+        <div>
+            <v-btn color="primary" to="/Projects">My Projects</v-btn>
         </div>
     </div>
 </template>
@@ -102,29 +102,5 @@ export default {
 <style scoped>
 .text {
     text-align: center;
-}
-
-.icon-mouse {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-mouse .v-icon {
-    transition: transform 0.3s ease-in-out;
-    animation: bounceUpDown 2s infinite;
-}
-
-@keyframes bounceUpDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
 }
 </style>

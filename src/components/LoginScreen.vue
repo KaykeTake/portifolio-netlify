@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="mx-auto" color="white">
+    <v-sheet class="mx-auto" height="100vh" color="white" :style="{ 'padding': '40px' }">
         <v-container fluid fill-height>
             <v-row align="center" justify="center">
                 <v-col cols="12" sm="8" md="6" lg="4">
