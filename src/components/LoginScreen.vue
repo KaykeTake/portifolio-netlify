@@ -3,7 +3,7 @@
         <v-container fluid fill-height>
             <v-row align="center" justify="center">
                 <v-col cols="12" sm="8" md="6" lg="4">
-                    <v-card class="mx-auto px-16 py-8">
+                    <v-card class="mx-auto px-12 py-8">
                         <div :style="{ 'display': 'flex', 'flex-direction': 'column', 'align-items': 'center' }">
                             <v-icon>mdi-fire</v-icon>
                             <p>WELCOME BACK</p>
