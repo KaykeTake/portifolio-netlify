@@ -14,7 +14,7 @@
             </div>
             <nav>
                 <ul class="ul-social">
-                    <a @click.prevent="console.log('oi')"><v-tooltip activator="parent" location="bottom">Not Found
+                    <a><v-tooltip activator="parent" location="bottom">Not Found
                             404</v-tooltip><v-icon>mdi-gmail</v-icon>Gmail</a>
                     <a href="https://www.linkedin.com/in/anderson-kayke/"><v-icon>mdi-linkedin</v-icon>LinkedIn</a>
                     <a href="https://github.com/KaykeTake"><v-icon>mdi-github</v-icon>GitHub</a>
@@ -23,14 +23,16 @@
         </header>
         <div class="bottom-container">
             <div class="info-container">
-                <div :style="{'display':'flex', 'flex-direction': 'column', 'gap': '1rem'}">
+                <div :style="{ 'display': 'flex', 'flex-direction': 'column', 'gap': '1rem' }">
                     <p class="front-end">
                         Front-End Developer
                     </p>
                     <p class="info">Programming your <br /> <i>EXPERIENCE.</i> </p>
                     <p>I design and code beautifully simple thing <br /> and i love what i do</p>
                 </div>
-                <a :style="{'font-size': 'xx-large', 'text-decoration': 'underline'}" color="#4BAFEB" href="/projects">See my Projects!</a>
+                <a :style="{ 'font-size': 'xx-large', 'text-decoration': 'underline', 'font-family': 'Salsa' }"
+                    color="#4BAFEB" href="/projects">See
+                    my Projects!</a>
                 <div class="rodape">
                     <div class="number-text">
                         <p class="number">01</p>
@@ -42,9 +44,9 @@
                     </div>
                 </div>
             </div>
-            <div :style="{'display': 'flex', 'align-items': 'end'}">
+            <div v-if="!isMobile" :style="{ 'display': 'flex', 'align-items': 'center' }">
                 <div class="backgroung-ball">
-
+                    Imagine My Picture here
                 </div>
             </div>
         </div>
@@ -52,8 +54,23 @@
 </template>
 
 <script setup>
-const chevron = '<'
+import { onMounted, ref } from 'vue';
+
+let isMobile = ref(null);
+
+const checkMobile = () => {
+    isMobile.value = window.innerWidth <= 1300; // ou outro valor de largura que você considere como "móvel"
+    if (isMobile.value) {
+        console.log('oi');
+    }
+}
+
+onMounted(() => {
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+});
 </script>
+
 
 <style scoped>
 .main-container {
@@ -75,6 +92,7 @@ header {
     justify-content: space-between;
     padding: 1.4rem;
 }
+
 
 .header-box {
     display: flex;
@@ -102,6 +120,7 @@ a {
     transition: color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
+    font-family: 'Salsa';
 }
 
 a:hover {
@@ -118,12 +137,14 @@ p {
     display: flex;
     justify-content: space-around;
 }
-.info-container{
+
+.info-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
+
 .front-end {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -141,15 +162,18 @@ p {
 .info {
     font-size: 3em;
 }
+
 .rodape {
     display: flex;
     font-size: x-large;
     gap: 6rem;
 }
+
 .number-text {
     display: flex;
     align-items: center;
 }
+
 .number {
     font-size: 4rem;
 }
@@ -159,6 +183,27 @@ p {
     height: 600px;
     background: linear-gradient(to bottom right, rgb(22, 22, 22), #0D0321);
     border-radius: 50%;
+}
 
+@media screen and (max-width: 1300px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ul-social {
+        gap: 2rem;
+    }
+    .number-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header-box{
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
 }
 </style>
