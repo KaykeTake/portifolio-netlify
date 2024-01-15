@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <CardProfile />
+    <NewCard />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CardProfile from '../components/CardProfile.vue'
+import NewCard from '../components/NewCard.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    CardProfile,
+    NewCard,
   },
 }
 </script>

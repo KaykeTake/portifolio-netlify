@@ -10,6 +10,7 @@
     <v-list-item link title="TicketShop" @click="changeProjects('ticketshop')"></v-list-item>
     <v-list-item link title="LoginScreen" @click="changeProjects('loginscreen')"></v-list-item>
     <v-list-item link title="Calculator" @click="changeProjects('calc')"></v-list-item>
+    <v-list-item link title="Whatsapp Clone - IN PROGRESS" @click="changeProjects('whatsapp')"></v-list-item>
     <template v-slot:append>
       <div class="pa-2">
         <v-btn block color="primary" to="/">Go to HomePage</v-btn>
@@ -20,21 +21,24 @@
   <TicketShop v-if="show === 'ticketshop'" />
   <LoginScreen v-if="show === 'loginscreen'" />
   <MiniCalc v-if="show === 'calc'" />
+  <WhatsappClone v-if="show === 'whatsapp'" />
 </template>
 <script>
 import TodoList from '../components/TodoList.vue'
 import TicketShop from '../components/TicketShop.vue'
 import LoginScreen from '../components/LoginScreen.vue'
 import MiniCalc from '../components/MiniCalc.vue'
+import WhatsappClone from '../components/WhatsappClone.vue'
 export default {
   components: {
     TodoList,
     TicketShop,
     LoginScreen,
-    MiniCalc
+    MiniCalc,
+    WhatsappClone
   },
   data: () => ({
-    show: 'calc',
+    show: 'whatsapp',
     drawer: true,
     isMobile: null
   }),
