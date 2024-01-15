@@ -55,7 +55,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-
+const chevron = '<'
 let isMobile = ref(null);
 
 const checkMobile = () => {
